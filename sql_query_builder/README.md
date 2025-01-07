@@ -43,6 +43,8 @@ include ('class.test.php');
 
 ## Usage
 
+---
+
 ### 1. Initialize the Database Class
 
 Create an instance of the `Db_Class` by providing your database connection settings.
@@ -57,6 +59,8 @@ $Db = new Db([
     'database' => 'test'
 ]);
 ```
+
+---
 
 ### 2. Generate Test Data
 
@@ -73,6 +77,8 @@ $data = [
 ];
 ```
 
+---
+
 ### 3. Insert Data into a Table
 
 ```
@@ -80,6 +86,14 @@ $Db->insert_to('users_test')
    ->values($data)
    ->exec();
 ```
+
+Output:
+
+```
+INSERT INTO users_test (user_name, user_password, status, birthday) VALUES ('Thlmp', '05d2c3dd0e312e2dafb8d17bed4841f6', '0', '1997-08-29')
+```
+
+---
 
 ### 4. Select Data from a Table
 
@@ -94,6 +108,13 @@ $Db->select()
    ->exec();
 ```
 
+Output:
+
+```
+SELECT * FROM users_test ORDER BY user_name ASC LIMIT 10
+```
+
+---
 
 ### 5. Update Data in a Table
 
@@ -106,6 +127,14 @@ $Db->update('users_test')
    ->exec();
 ```
 
+Output:
+
+```
+UPDATE users_test SET user_name = 'Iehje', user_password = '8004d2a2a009a42119d3b7c4d7f20e1c', status = '1', birthday = '1997-04-28'
+```
+
+---
+
 ### 6. Fetch Specific Items
 
 Retrieve the first or last item in the dataset.
@@ -114,6 +143,14 @@ Retrieve the first or last item in the dataset.
 $Db->get()->from('users_test')->firstItem()->exec();
 $Db->get()->from('users_test')->lastItem()->exec();
 ```
+
+Output:
+```
+SELECT * FROM users_test ORDER BY ASC LIMT 1
+SELECT * FROM users_test ORDER BY DESC LIMIT 1
+```
+
+---
 
 ### 7. Debugging and Execution
 
