@@ -17,7 +17,7 @@ Clone this repository and include the relevant files in your PHP project.
 
 Ensure the necessary files are included in your script:
 
-```
+```php
 /**
  * This file contains a simplified class for handling SQL
  * queries in PHP. It serves as the foundation for a lightweight,
@@ -49,7 +49,7 @@ include ('class.test.php');
 
 Create an instance of the `Db_Class` by providing your database connection settings.
 
-```
+```php
 use \My_Class\Db\Db_Class as Db;
 
 $Db = new Db([
@@ -66,7 +66,7 @@ $Db = new Db([
 
 Use the `Test` utility to generate random test data.
 
-```
+```php
 use \My_Class\Db\Test as Test;
 
 $data = [
@@ -81,7 +81,7 @@ $data = [
 
 ### 3. Insert Data into a Table
 
-```
+```php
 $Db->insert_to('users_test')
    ->values($data)
    ->exec();
@@ -99,7 +99,7 @@ INSERT INTO users_test (user_name, user_password, status, birthday) VALUES ('Thl
 
 Perform a `SELECT` query with filtering, sorting, and pagination.
 
-```
+```php
 $Db->select()
    ->from('users_test')
    ->where(['status' => 1])
@@ -120,7 +120,7 @@ SELECT * FROM users_test ORDER BY user_name ASC LIMIT 10
 
 Update a specific record in the database.
 
-```
+```php
 $Db->update('users_test')
    ->set($data)
    ->where(['user_id' => 2])
@@ -139,7 +139,7 @@ UPDATE users_test SET user_name = 'Iehje', user_password = '8004d2a2a009a42119d3
 
 Retrieve the first or last item in the dataset.
 
-```
+```php
 $Db->get()->from('users_test')->firstItem()->exec();
 $Db->get()->from('users_test')->lastItem()->exec();
 ```
@@ -163,8 +163,7 @@ All queries can be logged and inspected using the `print()` method before execut
 
 Below is a full example combining all operations:
 
-```
-<?php
+```php
 include ('class.db.simple.php');
 include ('class.test.php');
 
