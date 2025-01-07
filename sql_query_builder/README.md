@@ -217,6 +217,13 @@ SELECT * FROM users_test ORDER BY ASC LIMIT 1
 SELECT * FROM users_test ORDER BY DESC LIMIT 1
 ```
 
+## Next Step
+
+The next step is to implement database support, enabling the execution of the constructed queries on the database.
+This will involve retrieving data from the database, processing it, and ensuring that the query builder works seamlessly with
+the underlying database structure. Proper integration with the database will allow the builder to efficiently
+manage data, execute queries, and provide dynamic results.
+
 ## Contribution
 
 Please fork the repository, create a feature branch, and submit a pull request.
