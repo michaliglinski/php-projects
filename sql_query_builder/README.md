@@ -214,3 +214,10 @@ Please fork the repository, create a feature branch, and submit a pull request.
 ## License
 
 This project is licensed under the MIT License.
+
+## Author
+
+This project was created by **Michał Igliński**.
+
+You can connect with me on [LinkedIn](https://www.linkedin.com/in/miglinski) or
+check out more of my work on [GitHub](https://github.com/michaliglinski).
