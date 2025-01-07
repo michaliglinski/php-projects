@@ -1,7 +1,7 @@
 <?php namespace My_Class\Db;
 
 /**
- * Project Name: SQL Query Builder Random Data File
+ * Project Name: [SFI/QB] SQL Query Builder Random Data File
  * File: class.test.php
  * Description: Utility class for generating random test data, such as names, words, and dates.
  * Author: Michał Igliński (mtur.reklama@gmail.com)
