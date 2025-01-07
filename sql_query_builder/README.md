@@ -207,6 +207,16 @@ $Db->get()->from('users_test')->lastItem()->exec();
 ?>
 ```
 
+Output:
+
+```php
+INSERT INTO users_test (user_name, user_password, status, birthday) VALUES ('Cttxl', 'a28e5ab9b7792501646e49a7b5130ab2', '1', '2003-05-06')
+SELECT * FROM users_test ORDER BY user_name ASC LIMIT 10
+UPDATE users_test SET user_name = 'Kbkfs', user_password = '623bd6d17c7353c9ea0125e497a5edec', status = '1', birthday = '1991-09-11'
+SELECT * FROM users_test ORDER BY ASC LIMIT 1
+SELECT * FROM users_test ORDER BY DESC LIMIT 1
+```
+
 ## Contribution
 
 Please fork the repository, create a feature branch, and submit a pull request.

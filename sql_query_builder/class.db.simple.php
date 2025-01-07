@@ -428,6 +428,6 @@ class Db_Query {
      * Prints the constructed SQL query.
      */
     public function print() {
-        echo 'SQL: ' . $this->query . "\n";
+        echo $this->query . "\n";
     }
 }
